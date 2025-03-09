@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マインドエンジニアリング・コーチング | 人生を根本から変える科学的アプローチ</title>
+    <meta name="description" content="マインドエンジニアリング・コーチングは、最新の認知科学的知見を基盤とし、人が本来持つマインドの力を最大限に引き出す実践的プログラムです。現状の外側にゴールを設定し、人生を根本から変革します。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -689,6 +690,119 @@
             font-size: 16px;
         }
 
+        /* Comparison Section */
+        .comparison {
+            background-color: var(--gray);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .comparison::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: var(--gray);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 50px;
+            background-color: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary);
+            color: var(--light);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .check {
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: calc(100% - 100px);
+            height: 4px;
+            background-color: var(--gray-dark);
+            z-index: 0;
+        }
+
+        .process-step {
+            width: 23%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            color: var(--light);
+            font-size: 28px;
+            font-weight: 900;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(197, 5, 2, 0.3);
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .step-description {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
         /* Footer */
         footer {
             background-color: var(--accent);
@@ -818,6 +932,15 @@
                 left: 0;
                 width: 100%;
             }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-step {
+                width: 48%;
+                margin-bottom: 40px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -850,6 +973,32 @@
             .btn {
                 padding: 12px 30px;
                 font-size: 16px;
+            }
+
+            .process-step {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .price-box {
+                padding: 30px 20px;
+            }
+
+            .price-value {
+                font-size: 40px;
             }
         }
 
@@ -895,6 +1044,7 @@
                 <li><a href="#features">特徴</a></li>
                 <li><a href="#program">プログラム</a></li>
                 <li><a href="#price">料金</a></li>
+                <li><a href="#process">申込の流れ</a></li>
                 <li><a href="#profile">プロフィール</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
@@ -924,7 +1074,7 @@
                 <div class="pain-point fade-in">
                     <h3 class="pain-point-title">「今の現状を超えて、本当にやりたいことを実現したい」</h3>
                     <p>
-                        心の奥にある本当の望みに気づき、それを実現するための道筋が見えない。
+                        心の奥にある本当の望みに気づき、それを実現するための道筋が見えない。現状の枠組みを超えた可能性を探りたい。
                     </p>
                 </div>
                 <div class="pain-point fade-in delay-1">
@@ -936,7 +1086,7 @@
                 <div class="pain-point fade-in delay-2">
                     <h3 class="pain-point-title">「何かもっと大きな目標に向かって生きたい」</h3>
                     <p>
-                        現状に満足できず、もっと大きな目標、社会に貢献できる生き方を模索している。
+                        現状に満足できず、もっと大きな目標、社会に貢献できる生き方を模索している。自分の可能性をさらに広げたい。
                     </p>
                 </div>
             </div>
@@ -950,6 +1100,9 @@
                 <h2 class="section-title">マインドエンジニアリング・コーチングとは</h2>
                 <p>
                     マインドエンジニアリング・コーチングは、最新の認知科学的知見を基盤とし、人が本来持つマインドの力を最大限に引き出す実践的プログラムです。
+                </p>
+                <p>
+                    このコーチングの核心は「<strong>現状の外側にゴールを設定する</strong>」という考え方です。単なるスキルアップや問題解決ではなく、人生全体を変革する道筋を開きます。
                 </p>
                 <p>
                     従来の「根性論」や「ポジティブシンキング」とは一線を画した、科学的アプローチであなたの可能性を解放します。
@@ -978,45 +1131,96 @@
                     <div class="feature-number">1</div>
                     <h3 class="feature-title">「現状の外」にゴールを設定</h3>
                     <p class="feature-text">
-                        多くの人は「現状の内側」、つまり今の延長線上にゴールを設定してしまいます。真の変化は<strong>現状の外側</strong>にゴールを設定することから始まります。
+                        多くの人は「現状の内側」、つまり今の延長線上にゴールを設定してしまいます。真の変化は<strong>現状の外側</strong>にゴールを設定することから始まります。これがホメオスタシスを最大限に機能させる鍵です。
                     </p>
                 </div>
                 <div class="feature-card fade-in delay-1">
                     <div class="feature-number">2</div>
                     <h3 class="feature-title">脳の仕組みを活用</h3>
                     <p class="feature-text">
-                        私たちの脳には「ホメオスタシス」という恒常性維持機能があります。この脳の働きを利用して、努力感なく自然とゴールに向かうエネルギーを生み出します。
+                        私たちの脳には「ホメオスタシス」という恒常性維持機能があります。この脳の働きを利用して、努力感なく自然とゴールに向かうエネルギーを生み出します。現状と理想状態の差がエネルギーを生み出す原理です。
                     </p>
                 </div>
                 <div class="feature-card fade-in delay-2">
                     <div class="feature-number">3</div>
                     <h3 class="feature-title">100%やりたいことに集中</h3>
                     <p class="feature-text">
-                        「やるべきこと」や「できること」ではなく、「やりたいこと」に焦点を合わせます。やりたいことをやりたいだけやる—それが最も早く確実に結果を出す道です。
+                        「やるべきこと」や「できること」ではなく、「やりたいこと」に焦点を合わせます。やりたいことをやりたいだけやる—それが最も早く確実に結果を出す道です。好きなことは継続しやすく、上達も早いのです。
                     </p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-number">4</div>
                     <h3 class="feature-title">過去ではなく未来から考える</h3>
                     <p class="feature-text">
-                        「時間は未来から過去へ流れる」という視点で考えます。過去の経験や制約に縛られず、未来のゴール達成という視点から現在すべきことを導き出します。
+                        「時間は未来から過去へ流れる」という視点で考えます。過去の経験や制約に縛られず、未来のゴール達成という視点から現在すべきことを導き出します。過去は一切関係ありません。
                     </p>
                 </div>
                 <div class="feature-card fade-in delay-1">
                     <div class="feature-number">5</div>
                     <h3 class="feature-title">バランスホイールの活用</h3>
                     <p class="feature-text">
-                        人生の各領域（健康、家族、教養、職業、ファイナンス、社会貢献など）にバランスよくゴールを設定し、相乗効果を生み出します。
+                        人生の各領域（健康、家族、教養、職業、ファイナンス、社会貢献など）にバランスよくゴールを設定し、相乗効果を生み出します。各ゴールが相互に影響し合い、より豊かな人生を創出します。
                     </p>
                 </div>
                 <div class="feature-card fade-in delay-2">
                     <div class="feature-number">6</div>
-                    <h3 class="feature-title">社会性の重視</h3>
+                    <h3 class="feature-title">社会貢献の視点</h3>
                     <p class="feature-text">
-                        個人の幸せと社会の調和の両立を目指します。真の自己実現は、社会貢献という視点から生まれます。
+                        個人の幸せと社会の調和の両立を目指します。真の自己実現は、社会貢献という視点から生まれます。誰かが苦痛を感じるようなゴールではなく、みんながやさしい世界を実現するゴールを設定します。
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">他のコーチングとの違い</h2>
+                <p>マインドエンジニアリング・コーチングは、従来のコーチング手法と比較して明確な違いがあります</p>
+            </div>
+            <table class="comparison-table fade-in">
+                <thead>
+                    <tr>
+                        <th>特徴</th>
+                        <th>一般的なコーチング</th>
+                        <th>マインドエンジニアリング・コーチング</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ゴール設定の位置</strong></td>
+                        <td>現状の延長線上に設定</td>
+                        <td><strong class="check">現状の外側に設定</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>アプローチ</strong></td>
+                        <td>問題解決型・ステップバイステップ</td>
+                        <td><strong class="check">創造型・現状打破</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>過去の扱い</strong></td>
+                        <td>過去の分析に時間を費やす</td>
+                        <td><strong class="check">過去は関係なし、未来から考える</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>エネルギー源</strong></td>
+                        <td>意志の力、努力</td>
+                        <td><strong class="check">ホメオスタシスの自然なエネルギー</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>社会との関係</strong></td>
+                        <td>個人の成功に重点</td>
+                        <td><strong class="check">社会貢献を包含したゴール設定</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>理論的基盤</strong></td>
+                        <td>経験則や心理学</td>
+                        <td><strong class="check">最新の認知科学と脳科学</strong></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -1043,11 +1247,25 @@
                     <div class="program-value">全6回（初回トライアル + 継続5回）</div>
                 </div>
                 <div class="program-row">
+                    <div class="program-label">主な内容</div>
+                    <div class="program-value">
+                        <ul style="margin-left: 20px;">
+                            <li>現状の外側のゴール設定</li>
+                            <li>バランスホイールを活用した人生全体の調和</li>
+                            <li>ブリーフシステム（信念体系）の変革</li>
+                            <li>新しいコンフォートゾーンの創造</li>
+                            <li>ホメオスタシスの力でゴール達成までのエネルギーを生み出す</li>
+                            <li>エフィカシー（自己効力感）の向上</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program-row">
                     <div class="program-label">特徴</div>
                     <div class="program-value">
                         <ul style="margin-left: 20px;">
-                            <li>現状の外側にゴールを設定する</li>
-                            <li>ホメオスタシスの力でゴール達成までのエネルギーを生み出す</li>
+                            <li>クライアント一人ひとりに合わせた個別対応</li>
+                            <li>決まった流れや手順を設けない柔軟なアプローチ</li>
+                            <li>マインドの自然な流れを尊重した創造的な関わり</li>
                             <li>努力感不要、やりたいことをやりたいだけやる</li>
                             <li>科学的根拠に基づくアプローチ</li>
                         </ul>
@@ -1056,6 +1274,40 @@
                 <p class="program-note">
                     ※ セッション内容はクライアント一人ひとりのニーズに合わせてカスタマイズされます。
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container text-center">
+            <h2 class="section-title">お申し込みから始めるまで</h2>
+            <p>マインドエンジニアリング・コーチングは、以下の流れで始まります</p>
+            
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">初回トライアル申込</h3>
+                    <p class="step-description">専用フォームから初回トライアルセッションに申し込みます。お支払いは6,000円（税込）です。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-1">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">トライアルセッション</h3>
+                    <p class="step-description">約30分のセッションで、コーチングの概要説明とあなたのニーズやゴールの初期探索を行います。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-2">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">継続判断・契約</h3>
+                    <p class="step-description">トライアル後、継続を希望される場合は1週間以内に継続申込と残金のお支払い(214,000円)をお願いします。</p>
+                </div>
+                
+                <div class="process-step fade-in delay-3">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">コーチング開始</h3>
+                    <p class="step-description">契約完了後、2回目以降のセッションスケジュールを調整し、本格的なコーチングプログラムを開始します。</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1144,6 +1396,9 @@
                     <p class="profile-text">
                         最新の認知科学の知見を取り入れた独自のコーチング手法を確立。クライアントの現状の外側にゴールを設定し、自然なエネルギーでゴール達成へと導く実績を持つ。
                     </p>
+                    <p class="profile-text">
+                        「コーチングマインドをひとりでも多くの人にインストール」をミッションに、真のゴール設定と社会貢献を通じて、より良い世界を創造するためのサポートを行っています。
+                    </p>
                 </div>
             </div>
         </div>
@@ -1163,6 +1418,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         <span><a href="mailto:mindengineeringcoaching@gmail.com" style="color: #fff; text-decoration: underline; transition: color 0.3s ease;">mindengineeringcoaching@gmail.com</a></span>
                     </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>090-5710-7627</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>〒790-0012 愛媛県松山市湊町2-5-2リコオビル401</span>
+                    </div>
                 </div>
             </div>
             <div>
@@ -1172,6 +1435,7 @@
                     <li><a href="#features">特徴</a></li>
                     <li><a href="#program">プログラム</a></li>
                     <li><a href="#price">料金</a></li>
+                    <li><a href="#process">申込の流れ</a></li>
                     <li><a href="#profile">プロフィール</a></li>
                 </ul>
             </div>
