@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#ffffff"/>
+  <text x="20" y="45" font-family="Arial" font-size="24" fill="#c50502">Mind Engineering</text>
+  <text x="60" y="75" font-family="Arial" font-size="24" fill="#c50502">Coaching</text>
+  <rect x="10" y="85" width="180" height="3" fill="#c50502"/>
+</svg>
