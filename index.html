@@ -222,18 +222,22 @@
         }
 
         .hero-title {
-            font-size: 80px;
+            font-size: 70px; /* サイズを80pxから70pxに減らす */
             margin-bottom: 35px;
             background: linear-gradient(45deg, var(--primary-dark), var(--primary), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 900;
-            letter-spacing: 2px;
+            letter-spacing: 1px; /* 間隔を少し縮める */
             line-height: 1.2;
             text-shadow: 0 2px 15px rgba(0,0,0,0.05);
             position: relative;
             white-space: nowrap;
+            display: inline-block; /* インラインブロックで表示 */
+            max-width: 100%; /* 最大幅を制限 */
+            overflow: hidden; /* はみ出した部分を隠す */
+            text-overflow: ellipsis; /* 必要に応じて省略記号を表示 */
         }
 
         .hero-title::after {
@@ -364,8 +368,9 @@
             }
 
             .hero-title {
-                font-size: 60px;
+                font-size: 50px; /* さらに小さくする */
                 white-space: normal;
+                display: block;
             }
 
             .hero-subtitle {
@@ -432,7 +437,7 @@
             }
 
             .hero-title {
-                font-size: 46px;
+                font-size: 40px; /* さらに小さくする */
             }
 
             .hero-subtitle {
@@ -455,7 +460,7 @@
 
         @media (max-width: 576px) {
             .hero-title {
-                font-size: 38px;
+                font-size: 36px; /* さらに小さくする */
             }
 
             .hero-subtitle {
